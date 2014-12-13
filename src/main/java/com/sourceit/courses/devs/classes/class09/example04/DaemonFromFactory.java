@@ -8,7 +8,7 @@ public class DaemonFromFactory implements Runnable {
         try {
             while(true) {
                 TimeUnit.MILLISECONDS.sleep(100);
-                System.out.print(Thread.currentThread() + " " + this);
+                System.out.println(Thread.currentThread() + " " + this);
             }
         } catch(InterruptedException e) {
             System.out.print("Interrupted");
@@ -30,5 +30,6 @@ public class DaemonFromFactory implements Runnable {
         }
         System.out.print("All daemons started");
         TimeUnit.MILLISECONDS.sleep(500); // Run for a while
+        System.out.print("Finish");
     }
 }

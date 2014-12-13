@@ -9,6 +9,11 @@ class TaskWithResult implements Callable<String> {
         this.id = id;
     }
     public String call() {
+        try {
+            TimeUnit.SECONDS.sleep(10);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         return "result of TaskWithResult " + id;
     }
 }

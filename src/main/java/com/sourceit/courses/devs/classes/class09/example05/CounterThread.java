@@ -8,6 +8,14 @@ class Counter {
         this.count += value;
         System.out.println(count + " - " + threadName);
     }
+
+    public long getCount() {
+        return count;
+    }
+
+    public void setCount(long count) {
+        this.count = count;
+    }
 }
 
 public class CounterThread extends Thread {
@@ -28,6 +36,10 @@ public class CounterThread extends Thread {
         Counter counter = new Counter();
         Thread  threadA = new CounterThread(counter);
         Thread  threadB = new CounterThread(counter);
+
+        Counter counter1 = new Counter();
+        Thread  threadA1= new CounterThread(counter1);
+        Thread  threadB1 = new CounterThread(counter1);
 
         threadA.start();
         threadB.start();

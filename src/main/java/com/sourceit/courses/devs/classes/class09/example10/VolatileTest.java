@@ -3,7 +3,7 @@ package com.sourceit.courses.devs.classes.class09.example10;
 import java.util.concurrent.TimeUnit;
 
 public class VolatileTest {
-    private static volatile int MY_INT = 0;
+    private static int MY_INT = 0;
 
     public static void main(String[] args) {
         new ChangeListener().start();

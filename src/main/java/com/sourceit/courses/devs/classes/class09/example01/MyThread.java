@@ -17,7 +17,11 @@ public class MyThread extends Thread {
 
     public static void main(String[] args) {
         Thread thread = new MyThread();
+        Thread thread1 = new MyThread();
+        Thread thread2 = new MyThread();
         thread.start();
+        thread2.start();
+        thread1.start();
         System.out.println("main is over");
     }
 }

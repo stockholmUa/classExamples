@@ -1,6 +1,6 @@
 package com.sourceit.courses.devs.classes.class09.example01;
 
-public class LiftOff implements Runnable{
+public class LiftOff implements Runnable {
     protected int countDown = 10; // Default
     private static int taskCount = 0;
     private final int id = taskCount++;
